@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background:#ccc;
+}
+
+.tic-tac-toe {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  display: none;
+}
+
+.tic-tac-toe div:hover {
+  cursor: pointer;
+}
+
+.tic-tac-toe div {
+  background-color: #666;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tic-tac-toe .bottom {
+  border-bottom: 2px solid #000;
+}
+
+.tic-tac-toe .right {
+  border-right: 2px solid #000;
+}
+
+.game-modal {
+  background-color: #aaa;
+  height: 250px;
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.game-modal div .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.game-modal p, .play-again p {
+  font-size: 23px;
+}
+
+.game-modal button, .play-again button {
+  background: #d4d4d4;
+  color: #333;
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.game-modal button:hover, .play-again button:hover {
+  background: #ccc;
+  border: none;
+}
+
+.game-modal button:focus, .play-again button:hover {
+  outline: none;
+}
+
+.container .play-again {
+  background-color: #aaa;
+  height: 250px;
+  width: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  display: none;
+}
