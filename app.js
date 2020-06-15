@@ -26,11 +26,11 @@ function main() {
 }
 
 function selection(event_obj) {
-  if (event_obj.target.id !== "game") {
+  if (event_obj.target.id !== "game" && event_obj.target.innerText !== computer_choice) {
+    console.log(event_obj.target.innerText);
     event_obj.target.innerText = player_choice;
     game_grid[event_obj.target.id] = player_choice;
     if (is_winner(game_grid)) {
-      // game_over("You Have Won! Congratulations!");
       setTimeout(game_over.bind(null, "You Have Won! Congratulations!"), 1000);
     }
     is_first_move = false;
